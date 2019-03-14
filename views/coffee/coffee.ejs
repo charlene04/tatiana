@@ -1,0 +1,30 @@
+<% include ../partials/header.ejs %>	
+<% include ../partials/sidebar.ejs %>
+			
+		
+		<div class="col-md-6 main">
+			<div class="jumbotron coffee">
+				
+					<h1 class="heading">Coffee</h1>
+					<p class="subheading">Stay <em>woke</em> with a cup of cofffee!</p>
+					<%if(currentUser && currentUser.isAdmin){%>
+						<a href="/menu/coffee/new"><button class="mb-3 btn btn-xs btn-success">UPLOAD MENU</button></a>
+					<%}%>
+				
+			</div>
+			<div class="row mb-3 text-center">
+				<%coffees.forEach(function(coffee){%>
+					<div class="col-md-3 col-sm-6 mb-5">
+						<img class="img-thumbnail" src="<%=coffee.image%>">
+						<p><strong><%=coffee.name%></strong></p>
+						<a class="btn btn-primary btn-xs" href="/menu/coffee/<%= coffee._id %>">More Info</a>
+					</div>
+				<%});%>
+			</div>
+		</div>
+	
+
+
+<% include ../partials/sidebar1.ejs %>
+
+<% include ../partials/footer.ejs %>	

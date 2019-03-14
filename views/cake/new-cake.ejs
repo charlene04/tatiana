@@ -1,0 +1,35 @@
+<% include ../partials/header.ejs %>
+	<div id="drop" class="container">
+			<div id= "new">
+				<h1 class="text-center">New Cake Menu</h1>
+				
+			
+				<form action="/menu/cakes" method="POST">
+					<div class="form-group">
+						<label for="ID">ID:</label>
+						<input id="ID" type="number" name="cake[id]"  value="1" class="form-control w-100 pl-2">
+					</div>
+					<div class="form-group">
+						<label for="NAME">Title:</label>
+						<input id="NAME" type="text" name="cake[name]" placeholder="Menu Name" class=" form-control w-100 pl-2" required>
+					</div>
+					<div class="form-group">
+						<label for="IMAGE">Image:</label>
+						<input id="IMAGE" type="text" name="cake[image]" placeholder="Image Url" class="form-control w-100 pl-2" required>
+					</div>
+					<div class="form-group">
+						<label for="COST">Cost:</label>
+						<input id="COST" type="number" name="cake[price]"  placeholder="Cost" class="form-control w-100 pl-2" required>
+					</div>
+					<div class="form-group">
+						<label for="DESC">Description:</label>
+						<textarea id="DESC" name="cake[description]"  placeholder="Description" class="form-control  w-100 pb-5" required></textarea>
+					</div>
+					<button class="btn btn-success btn-md btn-block">UPLOAD</button>
+				</form>
+				<a href="/menu/cakes">Go Back</a>
+			</div>
+	</div>		
+
+
+<% include ../partials/footer.ejs %>

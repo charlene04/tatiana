@@ -1,0 +1,35 @@
+<% include ../partials/header.ejs %>
+	<div id="drop" class="container">
+			<div id= "new">
+				<h1>Edit <%=dough.name%></h1>
+				
+			
+				<form action="/menu/doughnuts/<%=dough._id%>?_method=PUT" method="POST">
+					<div class="form-group">
+						<label for="ID">ID:</label>
+						<input id="ID" type="number" name="doughnut[id]" value="<%=dough.id%>" class="form-control w-100 pl-2">
+					</div>
+					<div class="form-group">
+						<label for="NAME">Title:</label>
+						<input id="NAME" type="text" name="doughnut[name]" value="<%=dough.name%>" class=" form-control w-100 pl-2" required>
+					</div>
+					<div class="form-group">
+						<label for="IMAGE">Image:</label>
+						<input id="IMAGE" type="text" name="doughnut[image]" value="<%=dough.image%>"  class="form-control w-100 pl-2" required>
+					</div>
+					<div class="form-group">
+						<label for="COST">Cost:</label>
+						<input id="COST" type="number" name="doughnut[price]"  value="<%=dough.price%>" class="form-control w-100 pl-2" required>
+					</div>
+					<div class="form-group">
+						<label for="DESC">Description:</label>
+						<textarea id="DESC" name="doughnut[description]" class="form-control  w-100 pb-5" ><%=dough.description%></textarea>
+					</div>
+					<button class="btn btn-success btn-md btn-block">UPLOAD</button>
+				</form>
+				<a href="/menu/doughnuts/<%=dough._id%>">Go Back</a>
+			</div>
+	</div>		
+
+
+<% include ../partials/footer.ejs %>

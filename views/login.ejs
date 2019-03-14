@@ -1,0 +1,23 @@
+<% include ./partials/header.ejs %>		
+<div id="drop" class="container">
+		<div id="login">
+				<h1 class="text-center">User Login</h1>
+				<form action="/login" method="POST">
+					<div class="form-group">
+						<input id="username/email" class="form-control" type="username" name="username" placeholder="Username">
+					</div>
+					
+					<div class="form-group">
+						<input class="form-control" type="password" name="password" placeholder="Password">
+					</div>
+
+					 
+					<div class="form-group">
+					  <button class="btn btn-primary btn-lg  btn-block">LOG IN</button>
+					</div>
+				</form>
+			
+				<p><a href="/menu/cakes">Go Back</a> | Not a registered user? <a href="/register">Sign Up Now</a></p>
+		</div>
+</div>
+<% include ./partials/footer.ejs %>

@@ -1,0 +1,52 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/sidebar.ejs %>	
+
+		<div class="col-md-6 main">
+			<div class="border mb-3">
+				<img class="img-thumbnail img-responsive" id="img-height" src="<%=coffee.image%>">
+				<div class="caption-full">
+					<h6 class="float-right"><strong><%=coffee.price%>NGN</strong></h6>
+					<h6><strong><a href="#"><%=coffee.name%></a></strong></h6>
+					<p><%-coffee.description%></p>
+					<%if(currentUser && !currentUser.isAdmin  || !currentUser){%>
+					<a class="btn btn-md btn-success"href="#">Order Now!</a>
+					<%}%>
+					<%if(currentUser && currentUser.isAdmin){%>
+						<a class="btn btn-warning btn-xs" href="/menu/coffee/<%=coffee._id%>/edit">Edit</a>
+						<form class="delete-form" action="/menu/coffee/<%=coffee._id%>?_method=DELETE" method="POST">
+							<button class="btn btn-danger btn-xs">Delete</button>
+						</form>
+					<%}%>
+					
+				</div>
+			</div>
+			<div class="card card-body bg-light">
+				<div class="text-right">
+					<a class="btn btn-secondary" href="/menu/coffee/<%=coffee._id%>/comments/new">Add New Comment</a>
+				</div>
+				<hr>
+				<%coffee.comments.slice().reverse().forEach(function(comment){%>
+					<div class="row">
+						<div class="col-md-12">
+							<strong><%=comment.author.username%></strong>
+							<span class="float-right"><%=comment.created.toDateString()%></span>
+							<p><%=comment.text%></p>
+						</div>
+						<%if(currentUser && comment.author.id.equals(currentUser._id)|| currentUser && currentUser.isAdmin){%>
+							<div class="pl-3 mb-3">
+								<a class="btn btn-warning btn-xs" href="/menu/coffee/<%=coffee._id%>/comments/<%=comment._id%>/edit">Edit</a>
+								<form class="delete-form" action="/menu/coffee/<%=coffee._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+									<button class="btn btn-danger btn-xs">Delete</button>
+								</form>
+							</div>
+						<%}%>
+					</div>
+				<%});%>
+			</div>
+			</div>
+		
+
+	
+			<% include ../partials/sidebar1.ejs %>
+			
+<% include ../partials/footer.ejs %>

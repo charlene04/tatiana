@@ -1,0 +1,237 @@
+html, body{
+	height: 100%;
+	font-size: x-small;
+	width: 100%;
+	
+	/*background-color: #303F9F;*/
+}
+
+.alert-success, .alert-danger{
+	top: 6em;
+}
+
+
+
+
+/*===================NAVBAR=================================*/
+
+.fixed-top{
+	padding:1.5em;
+	
+}
+
+.navbar-nav li {
+	padding: 0 0.5em;
+	
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: rgba(255, 255, 255, 0.85);
+	font-weight: 700;
+	padding-right: 1em;
+	padding-left: 1em;
+	margin-right: 1em;
+}
+
+.dropdown-menu {
+	background-color: rgba(0 , 128, 116, 0.7);
+}
+
+.dropdown-item{
+	padding: 0.4rem 1.5rem;
+	color: rgb(255 , 235, 205);
+	font-family: roboto;
+	letter-spacing: 0.05em;
+}
+
+.navbar-dark .navbar-nav .nav-link.active{
+	background-color: rgba(244, 54, 54, 0.87); 
+}
+
+.list-group-item:last-child {
+	letter-spacing: 0.05em;
+}
+
+
+.navbar-dark .navbar-brand{
+	font-family: 'Molle', cursive;
+	font-size: 1.5em;
+	color: rgba(255, 255, 255, 1);
+	font-weight: 550;
+}
+
+/*#2f4f4f*/
+
+/*======================ALL LOGINS======================================*/
+
+
+#signup, #login, #new {
+	
+	width: 30%;
+	margin: 0 auto;
+	padding-top: 8em;
+
+}
+
+label {
+	font-weight: bold;
+}
+
+div#admin{
+	border: 0.1px dashed grey;
+	padding:5px;
+}
+
+div#new{
+	width: 30%;
+	margin: 0 auto;
+	padding-top: 2em;
+
+}
+
+
+
+
+
+/*=================================================*/
+div#drop {
+	padding-top: 7em ;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 20px;
+}
+
+p.lead {
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+	font-family: roboto;
+}
+
+.list-group-item{
+	font-weight: bold;
+}
+
+.list-group-item a{
+	padding-right: 2em;
+}
+
+.list-group-item.active{
+	background-color:#20a755; 
+}
+
+
+.delete-form{
+	display: inline;
+}
+
+/*=================thumbnail*/
+.img-thumbnail{
+	padding: 0;
+}
+
+img.img-thumbnail{
+	width:100%;
+
+
+}
+
+#img-height{
+	height: 380px;
+}
+
+div.caption-full {
+	padding: 9px;
+
+}
+.row {
+	display: flex;
+	
+} 
+
+div.card .card-body img{
+	width: 25px;
+	height: 25px;
+	
+}
+
+div.card .card-body h4{
+	color: brown;
+}
+
+
+
+.jumbotron {
+	height: 200px;
+
+	
+}
+
+
+div.cake {
+	background-image: url(/img/cake1.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+div.coffee {
+	background-image: url(/img/coffee1.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+div.donuts {
+	background-image: url(/img/donuts1.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h1.heading {
+	font-family: "Italianno";
+	font-size: 70px;
+	color: #fff;
+	letter-spacing: 2px;
+}
+
+p.subheading {
+	font-family: "Laila";
+	letter-spacing: 2px;
+	font-size: 15px;
+	color: rgb(250, 255, 150);
+	text-shadow: 1px 1px #000;
+}
+
+
+
+/*========================FOOTER*/
+
+.page-footer{
+	background-color: #343a40;
+	color: #fff;
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+}
+
+ #map {
+        height: 190px; 
+        width: inherit;  
+        background-color: rgba(61, 34, 212, 0.16); 
+       }
+a#navbarDropdown.nav-link.dropdown-toggle {display: block;}
+aside.showHide {display: none;}
+li#menu-link {display: none;}
+div.phone-size {display: block;}
+
+@media screen and (min-width: 768px){
+	a#navbarDropdown.nav-link.dropdown-toggle {display: none;}
+	aside.showHide{display: block;}
+	li#menu-link {display: block;}
+	div.phone-size {display: none;}
+}
+
+
+
+

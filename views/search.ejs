@@ -1,0 +1,18 @@
+<%include ./partials/header.ejs%>
+<%include ./partials/sidebar.ejs%>
+
+<div class="col-md-6 text-center">
+	<h1>Search Results</h1>
+	<%match.forEach(function(found){%>
+		<div class="col-md-3 col-sm-6 mb-3">
+			<img class="img-thumbnail" src="<%=found.image%>">
+			<p><strong><%=found.name%></strong></p>
+			
+		</div>
+		
+<%})%>
+	
+</div>
+
+<%include ./partials/sidebar1.ejs%>
+<%include ./partials/footer.ejs%>

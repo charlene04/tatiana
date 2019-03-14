@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Tatiana Catering Services</title>
+	<link rel="icon" type="image/png" href="/img/Event-Services.png">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/css/pushy.css">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Charm|Italianno|Mate+SC|Molle:400i|Great+Vibes|Jura|Laila|Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/css/mystyle.css">
+
+ 
+</head>
+<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+			<div class="container"> 
+				<a class="navbar-brand" href="/">Tatiana's</a> 
+				<button class="navbar-toggler"type="button"data-toggle="collapse" 
+				data-target="#navbarSupportedContent"aria-controls="navbarSupportedContent"aria-expanded="false"aria-label="Toggle navigation">   
+				 <span class="navbar-toggler-icon"></span> 
+				</button> 
+				<div class="collapse navbar-collapse"id="navbarSupportedContent">   
+					<ul class="navbar-nav mr-auto"> 
+						
+						<li class="nav-item dropdown mb-3">
+							<a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								MENU
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="/menu/cakes"><i class="fas fa-greater-than"></i>	Assorted Cakes</a>
+								<a class="dropdown-item" href="/menu/doughnuts"><i class="fas fa-greater-than"></i> Flavoured Doughnuts</a>
+								<a class="dropdown-item" href="/menu/Coffee"><i class="fas fa-greater-than"></i> Refreshening Coffee</a>
+							</div>
+								
+						</li> 
+						   
+						
+						
+						<li class="nav-item active">       
+							<a class="nav-link active"href="/">Home<span class="sr-only">(current)</span></a>     
+						</li>   
+						<li class="nav-item" id="menu-link">      
+							<a class="nav-link"href="/menu/cakes">Menu</a>     
+						</li> 
+						<li class="nav-item">      
+							<a class="nav-link"href="cont.ejs">Order Online</a>     
+						</li>
+						<li class="nav-item">      
+							<a class="nav-link"href="/about">About Us</a>     
+						</li>
+					</ul> 
+					<ul class="navbar-nav ml-auto"> 
+						<%if(!currentUser){%>
+							<li class="nav-item">      
+								<a class="nav-link"href="/register"><i class="fas fa-user-plus"></i>Register</a>     
+							</li> 
+							<li class="nav-item">      
+								<a class="nav-link"href="/login"><i class="fas fa-user"></i>Login</a>     
+							</li> 
+						<%} else{%>
+							<li class="nav-item">
+								<a class="nav-link" href=""><i class="fas fa-user"></i>Welcome, <%=currentUser.username%></a>
+							</li>
+						<%if(currentUser && currentUser.isAdmin){%>
+								<li class="nav-item">      
+									<a class="nav-link"href="/registered"><i class="fas fa-users"></i>Users</a>     
+								</li> 	
+							<%}%>
+							<li class="nav-item">      
+								<a class="nav-link"href="/logout"><i class="fas fa-user-alt-slash"></i>Logout</a>     
+							</li> 
+						<%}%>
+						
+						
+					</ul>  
+				</div>
+			
+		 </nav>
+		 <div class="container">
+			 <%if(error && error.length > 0){%>
+				<div class="alert alert-danger" role="alert"><%=error%></div>
+			 <%}%>
+			 <%if(success && success.length > 0){%>
+				<div class="alert alert-success" role="alert"><%=success%></div>
+			<%}%>
+		 </div>
+		
+		
+	
+	
+	

@@ -1,0 +1,31 @@
+<% include ../partials/header.ejs %>	
+
+<% include ../partials/sidebar.ejs %>
+			
+		
+		<div class="col-md-6 main">
+			<div class="jumbotron cake">
+
+				
+					<h1 class="heading">Cakes</h1>
+					<p class="subheading">Birthdays| Weddings| Social Events| Seasons|</p>
+					<%if(currentUser && currentUser.isAdmin){%>
+						<a href="/menu/cakes/new"><button class="mb-3 btn btn-xs btn-success">UPLOAD MENU</button></a>
+					<%}%>
+				
+			</div>
+			<div class="row mb-3 text-center">
+				<%cakes.forEach(function(cake){%>
+					<div class="col-md-3 col-sm-6 mb-5">
+						<img class="img-thumbnail" src="<%=cake.image%>">
+						<p><strong><%=cake.name%></strong></p>
+						<a class="btn btn-primary btn-xs" href="/menu/cakes/<%= cake._id %>">More Info</a>
+					</div>
+				<%});%>
+			</div>
+		</div>
+	<% include ../partials/sidebar1.ejs %>
+
+
+
+<% include ../partials/footer.ejs %>	

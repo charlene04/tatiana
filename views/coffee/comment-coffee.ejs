@@ -1,0 +1,20 @@
+<% include ../partials/header.ejs %>
+	<div id="drop" class="container">
+			<div id= "new">
+				<h1 class="text-center">Add New Comment to <%=coffee.name%></h1>
+				
+			
+				<form action="/menu/coffee/<%=coffee._id%>/comments" method="POST">
+					
+					<div class="form-group">
+						<label for="DESC">Comment:</label>
+						<textarea id="DESC" name="comment[text]"  placeholder="Write your comment" class="form-control  w-100 pb-5" required></textarea>
+					</div>
+					<button class="btn btn-success btn-md btn-block">Submit!</button>
+				</form>
+				<a href="/menu/cakes">Go Back</a>
+			</div>
+	</div>		
+
+
+<% include ../partials/footer.ejs %>
