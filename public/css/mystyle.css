@@ -1,11 +1,19 @@
 html, body{
 	height: 100%;
-	font-size: x-small;
+	min-height: 100%;
+	font-size: 1.5vh;
 	width: 100%;
 	
-	/*background-color: #303F9F;*/
+
 }
 
+footer{
+	width: 100vw;
+	margin-right: 0;
+	margin-left: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
 .alert-success, .alert-danger{
 	top: 6em;
 }
@@ -94,11 +102,16 @@ div#new{
 
 
 /*=================================================*/
+
 div#drop {
+	font-size: 1rem;
 	padding-top: 7em ;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-bottom: 20px;
+	padding-left: 4vw;
+	padding-right: 4vw;
+	padding-bottom: 1rem;
+	background-color:  white;
+	min-height: 100%;
+	
 }
 
 p.lead {
@@ -161,8 +174,7 @@ div.card .card-body h4{
 
 
 .jumbotron {
-	height: 200px;
-
+	height: 20rem;
 	
 }
 
@@ -182,15 +194,15 @@ div.coffee {
 }
 
 div.donuts {
-	background-image: url(/img/donuts1.jpeg);
-	background-position: center;
+	background-image: url(/img/dough.jpg);
+	background-position: right;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 h1.heading {
 	font-family: "Italianno";
-	font-size: 70px;
+	font-size: 6em;
 	color: #fff;
 	letter-spacing: 2px;
 }
@@ -198,7 +210,7 @@ h1.heading {
 p.subheading {
 	font-family: "Laila";
 	letter-spacing: 2px;
-	font-size: 15px;
+	font-size: 2em;
 	color: rgb(250, 255, 150);
 	text-shadow: 1px 1px #000;
 }
@@ -210,13 +222,14 @@ p.subheading {
 .page-footer{
 	background-color: #343a40;
 	color: #fff;
-	bottom: 0;
-	position: fixed;
+	/* bottom: 0;
+	position: fixed; */
 	width: 100%;
+	z-index: 1030;
 }
 
  #map {
-        height: 190px; 
+        height: 50vh; 
         width: inherit;  
         background-color: rgba(61, 34, 212, 0.16); 
        }

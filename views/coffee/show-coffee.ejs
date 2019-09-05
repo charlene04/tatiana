@@ -1,7 +1,7 @@
 <% include ../partials/header.ejs %>
 <% include ../partials/sidebar.ejs %>	
 
-		<div class="col-md-6 main">
+		<div class="col-md-8 main">
 			<div class="border mb-3">
 				<img class="img-thumbnail img-responsive" id="img-height" src="<%=coffee.image%>">
 				<div class="caption-full">
@@ -9,7 +9,7 @@
 					<h6><strong><a href="#"><%=coffee.name%></a></strong></h6>
 					<p><%-coffee.description%></p>
 					<%if(currentUser && !currentUser.isAdmin  || !currentUser){%>
-					<a class="btn btn-md btn-success"href="#">Order Now!</a>
+					<a class="btn btn-md btn-success disabled"href="#">Order Now!</a>
 					<%}%>
 					<%if(currentUser && currentUser.isAdmin){%>
 						<a class="btn btn-warning btn-xs" href="/menu/coffee/<%=coffee._id%>/edit">Edit</a>
@@ -44,9 +44,7 @@
 				<%});%>
 			</div>
 			</div>
-		
-
-	
-			<% include ../partials/sidebar1.ejs %>
+		</div>
+	</div>
 			
 <% include ../partials/footer.ejs %>

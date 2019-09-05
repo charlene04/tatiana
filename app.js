@@ -414,7 +414,7 @@ app.post("/menu/doughnuts/:id/comments", isLoggedIn, function(req, res){
 					comment.save();
 					foundDough.comments.push(comment);
 					foundDough.save();
-					req.flash("error", "Comment added successfully");
+					req.flash("error", "Comment added successfully!");
 					res.redirect("/menu/doughnuts/"+ foundDough._id);
 				}
 			});
@@ -439,7 +439,7 @@ app.post("/menu/coffee/:id/comments", isLoggedIn, function(req, res){
 					comment.save();
 					foundCoffee.comments.push(comment);
 					foundCoffee.save();
-					req.flash("error", "Comment added successfully");
+					req.flash("error", "Comment added successfully!");
 					res.redirect("/menu/coffee/"+ foundCoffee._id);
 				}
 			});
@@ -641,7 +641,7 @@ app.post("/menu/search", function(req, res){
 	
 })
 
-app.get("/registered", isLoggedIn, function(req, res){
+app.get("/users", isLoggedIn, function(req, res){
 	User.find({}, function(err, users){
 		if(err){
 			req.flash("error", "Something went wrong!");
