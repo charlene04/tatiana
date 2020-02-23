@@ -4,19 +4,23 @@
   "description": "my file",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node app.js"
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "13.2.0"
   },
   "author": "charles",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
     "connect-flash": "^0.1.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-router": "0.0.1",
     "express-sanitizer": "^1.0.5",
     "express-session": "^1.15.6",
+    "helmet": "^3.21.2",
     "method-override": "^3.0.0",
     "mongoose": "^5.4.13",
     "passport": "^0.4.0",

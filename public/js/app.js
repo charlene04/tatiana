@@ -12,13 +12,25 @@ function(){
 	$(this).css("background-color", "#fff");
 });
 
-// $(".list-group-item:last-child").on("click", function(){
-// 	$(this).css("background-color", "#757575");	
-// });
 
 
 
 
+$('#dismiss, .overlay').on('click', function(){
+  $('.wrapper').addClass('display');
+  $('.overlay').removeClass('active');
+})
+
+function SideBar(){
+  $('.wrapper').removeClass('display');
+  $('.overlay').addClass('active');
+  $('.collapse.in').toggleClass('in');
+  $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+};
+
+function logout(){
+  $('.dropdown-content').toggleClass('display');
+}
 
 function initMap() {
   // The location of Uluru

@@ -1,0 +1,96 @@
+<%include ./partials/header.ejs%>
+<div id="drop">
+    <div class="container main">
+        <div class="jumbotron">			
+            <h1 class="text-center heading" style="color:white; min-height: 40px !important;">Frequently Asked Questions</h1>
+      </div>    
+    </div>
+            <div id="faq">
+            <!--POTENTIAL QUESTIONS FROM NEW USERS-->
+            <section >
+                            <div class="question">
+                                    <button class="accordion">What is to be known about Artemis?</button>
+                                    <div class="panel">
+                                        <p>Artemis is an online educational platform that brings together seasoned teachers and agitated learners
+                                            for the sole purpose of sharing knowledge.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            
+                                <div class="question">
+                                        <button class="accordion">Why should I be enrolled on Artemis?</button>
+                                        <div class="panel">
+                                            <p>Artemis is not biased as regards subjects/skills that could be learnt on the platform.
+                                                This fact mitigates every barrier there is towards being who you want to be!
+                                            </p>
+                                        </div>
+                                </div>
+                                <div class="question">
+                                        <button class="accordion">Who is the brain behind the platform Artemis?</button>
+                                        <div class="panel">
+                                          <p>Artemis is designed in 2019 by 25 members of Team Artemis during the HNG Internship 6.0</p>  
+                                        </div>
+                                </div>
+                                <div class="question">
+                                        <button class="accordion">Where do I go from here?</button>
+                                        <div class="panel">
+                                           <p>
+                                               <ol>
+                                                   <li>Register as a student or a teacher by clicking on the appopriate signup</li>
+                                                   <li>Create courses and upload materials if you are a registered teacher</li>
+                                                   <li>Enrol in courses of your choice if you are a student</li>
+                                                   <li>Interact with students/teachers within the space</li>
+                                                   <li>Have fun learning/teaching!</li>
+
+                                               </ol>
+                                           </p>             
+                                        </div>
+                                    </div>
+                                <div class="question">
+                                        <button class="accordion">How does Artemis profer solution to societal problems?</button>
+                                        <div class="panel">
+                                            <p>Learning barriers due to location has been solved since there is access to variety of courses from 
+                                                anywhere you are in the world.</p>
+                                        </div>
+                                </div>
+                                <div class="question">
+                                        <button class="accordion">Can I run Ads on Artemis?</button>
+                                            <div class="panel">
+                                                <p>This feature is coming soon! </p>
+                                            </div>
+                                </div>
+                                <div class="question">
+                                        <button class="accordion">How can I get in touch with the technical team?</button>
+                                        <div class="panel">
+                                            <p>Visit the contact us page. If not found, be patient.</p>
+                                        </div>
+                                </div>
+                                <div class="question">
+                                    <button class="accordion">Is the App available on Google play store?</button>
+                                    <div class="panel">
+                                        <p>Not yet. But soon!</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            </div>
+<script type="text/javascript">
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active1");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
+</script>
+</section>
+<%include ./partials/footer.ejs%>

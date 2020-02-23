@@ -7,6 +7,14 @@ html, body{
 
 }
 
+hr.underline1{
+    background-color: red;
+    color: red;
+    width: 60%;
+	height: 1px;
+	margin-left: 0;
+}
+
 footer{
 	width: 100vw;
 	margin-right: 0;
@@ -20,7 +28,9 @@ footer{
 
 
 
-
+.display{
+	display: none;
+}
 /*===================NAVBAR=================================*/
 
 .fixed-top{
@@ -67,7 +77,11 @@ footer{
 	color: rgba(255, 255, 255, 1);
 	font-weight: 550;
 }
-
+hr{
+	margin-left: 0;
+	width: 75%;
+	border: 0.3px dashed;
+}
 /*#2f4f4f*/
 
 /*======================ALL LOGINS======================================*/
@@ -75,7 +89,7 @@ footer{
 
 #signup, #login, #new {
 	
-	width: 30%;
+	width: 50%;
 	margin: 0 auto;
 	padding-top: 8em;
 
@@ -91,13 +105,22 @@ div#admin{
 }
 
 div#new{
-	width: 30%;
+	width: 40%;
 	margin: 0 auto;
 	padding-top: 2em;
 
 }
 
-
+@media only screen and (max-width:800px){
+    #signup, #login, #new{
+        width: 70%;
+    }
+}
+@media only screen and (max-width:420px){
+	#signup, #login, #new{
+        width: 95%;
+    }
+}
 
 
 
@@ -106,11 +129,9 @@ div#new{
 div#drop {
 	font-size: 1rem;
 	padding-top: 7em ;
-	padding-left: 4vw;
-	padding-right: 4vw;
 	padding-bottom: 1rem;
 	background-color:  white;
-	min-height: 100%;
+	min-height: 80%;
 	
 }
 
@@ -174,7 +195,7 @@ div.card .card-body h4{
 
 
 .jumbotron {
-	height: 20rem;
+	min-height: 40px;
 	
 }
 
@@ -221,7 +242,6 @@ p.subheading {
 
 .page-footer{
 	background-color: #343a40;
-	color: #fff;
 	/* bottom: 0;
 	position: fixed; */
 	width: 100%;
@@ -229,7 +249,7 @@ p.subheading {
 }
 
  #map {
-        height: 50vh; 
+        height: 35vh; 
         width: inherit;  
         background-color: rgba(61, 34, 212, 0.16); 
        }
@@ -237,14 +257,149 @@ a#navbarDropdown.nav-link.dropdown-toggle {display: block;}
 aside.showHide {display: none;}
 li#menu-link {display: none;}
 div.phone-size {display: block;}
+div#nav10{display: none;}
 
-@media screen and (min-width: 768px){
+@media only screen and (min-width:992px){
+	div#nav10{display: inline-flex;}
 	a#navbarDropdown.nav-link.dropdown-toggle {display: none;}
 	aside.showHide{display: block;}
 	li#menu-link {display: block;}
 	div.phone-size {display: none;}
+	
+}
+@media only screen and (max-width: 992px){
+	div#nav10{display: none;}
+	aside.showHide {display: none;}
+	div#nav11{display: block;}
+	.col-md-8{flex: none; max-width: unset;}
 }
 
 
 
 
+/*======================SIDEBAR============================*/
+#sidebar{
+	background-color: #e5e5e5;
+	background-image: url(/img/bg.png);
+	background-repeat: no-repeat;
+    background-position: top;
+    background-size: inherit;
+	min-width: 250px;
+	max-width: 250px;
+	height: 100vh;
+	font-size: 16px;
+	position: fixed;
+	left: 0;
+	z-index: 9999;
+}
+#sidebar a{
+	color: #000;
+}
+.overlay{
+	display: none;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 998;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+.overlay.active{
+	display: block;
+	opacity: 1;
+}
+
+#dismiss{
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+
+.dropdown-content{
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	position: fixed; 
+	background-color: #e5e5e5; 
+	width: 100px; 
+	z-index: 1; 
+	height: 30px;
+	box-shadow: 0 8px 16px 0px rgba(0, 0, 0, 0.2);
+	
+}
+
+/*========================FAQ=======================*/
+
+
+#faq{
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px auto;
+}
+
+div.question{
+    margin-bottom: 20px; 
+}
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background: #57489D;
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 30px;
+    
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .accordion:hover {
+    background-color: rgba(88, 72, 157, 0.795);
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 25px;
+    background: #FFFEFE;
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .panel p{
+      padding-top: 10px;
+  }
+
+  .active1, .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active1:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+
+
+@media only screen and (max-width:615px) {
+    #faq{
+        width: 90%;
+    }
+}
+@media only screen and (min-height:900px){
+div#faq{
+        height: 80vh;
+    }
+}

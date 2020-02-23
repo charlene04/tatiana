@@ -5,6 +5,7 @@ html, body{
 	font-size: 2vh;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 	
 	
 	
@@ -25,8 +26,24 @@ div .welcome{
 	z-index: 1;
 	position: relative;
 	text-align: center;
-	padding-top: 40vh;
-	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+div.header{
+	background-color: #00000075;
+	color: #fff;
+	width: 90%;
+	min-height: 30%;
+}
+div.header h2{
+	font-size: 65px;
+}
+div.header p{
+	font-size: 25px;
+	font-style: italic;
 }
 .slider{
 	/* position: relative; */
@@ -88,8 +105,40 @@ div .welcome{
 	}
 }
 
-
-
+.btn-primary {
+    color: #fff;
+    border: 7px solid #007bff;
+    border-radius: 50px;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    position: relative;
+   
+  }
+  
+  @-webkit-keyframes bounce{
+      0%, 100%{
+          -webkit-transform: translateY(0);
+      }
+      50%{
+          -webkit-transform: translateY(-5px);
+      }
+  }
+  @keyframes bounce{
+      0%, 100%{
+          transform: translateY(0);
+      }
+      50%{
+          transform: translateY(-5px);
+      }
+  }
 
 .bg-transparent {
 	border: 1.5px solid black;
@@ -112,7 +161,7 @@ h3 {
 }
 
 nav{
-	height:12vh;
+	height:8vh;
 	z-index: 10000;
 }
 .row {
