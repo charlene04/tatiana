@@ -15,13 +15,14 @@
 				
 			</div>
 			<div class="row mb-3 text-center">
+				<%if(cakes){%>
 				<%cakes.forEach(function(cake){%>
 					<div class="col-md-3 col-sm-6 mb-5">
 						<img class="img-thumbnail" src="<%=cake.image%>">
 						<p><strong><%=cake.name%></strong></p>
 						<a class="btn btn-primary btn-xs" href="/menu/cakes/<%= cake._id %>">More Info</a>
 					</div>
-				<%});%>
+				<%});}%>
 			</div>
 		</div>
 	</div>

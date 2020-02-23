@@ -5,10 +5,8 @@ html, body{
 	font-size: 2vh;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
-	
-	
-	
+	overflow-x: hidden;
+	word-break: break-word;
 	}
 
 
@@ -21,6 +19,13 @@ div#homeScreen {
 
 	
 }
+.navbar-dark .navbar-brand{
+	font-family: 'Molle', cursive;
+	font-size: 1.5em;
+	color: rgba(255, 255, 255, 1);
+	font-weight: 550;
+}
+
 
 div .welcome{
 	z-index: 1;
@@ -42,7 +47,7 @@ div.header h2{
 	font-size: 65px;
 }
 div.header p{
-	font-size: 25px;
+	font-size: 18px;
 	font-style: italic;
 }
 .slider{
@@ -176,3 +181,12 @@ h5 li{
 	list-style-type: square;
 	color: #f7f015;
 }
+/*
+@media  screen and (max-width: 1024px) and (max-height: 1366px){
+	div.header h2{
+		font-size: 150px;
+	}
+}
+*/
+
+

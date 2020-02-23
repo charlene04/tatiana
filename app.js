@@ -11,8 +11,8 @@ var isLoggedIn = require("./middleware/isLoggedIn"),
 	 Menu = require("./models/Menu"),
 	 comment = require("./models/Comment");
 // ===========APP CONFIG===============================
-//mongoose.connect("mongodb://localhost/tatianaDB", {useNewUrlParser: true});
-mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true})
+mongoose.connect("mongodb://localhost/tatianaDB", {useNewUrlParser: true});
+//mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true})
 
 app.use(require("express-session")({
 	secret: "Charles built this",
@@ -34,7 +34,7 @@ app.use(function(req, res, next){
 	next();
 });
 
-require("./routes/prod");
+require("./routes/prod")(app);
 
 var indexRoutes = require("./routes/home"),
 	termsRoutes = require("./routes/terms"),

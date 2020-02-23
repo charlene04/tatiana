@@ -13,13 +13,14 @@
 				
 			</div>
 			<div class="row mb-3 text-center">
+				<%if(coffees){%>
 				<%coffees.forEach(function(coffee){%>
 					<div class="col-md-3 col-sm-6 mb-5">
 						<img class="img-thumbnail" src="<%=coffee.image%>">
 						<p><strong><%=coffee.name%></strong></p>
 						<a class="btn btn-primary btn-xs" href="/menu/coffee/<%= coffee._id %>">More Info</a>
 					</div>
-				<%});%>
+				<%});}%>
 			</div>
 		</div>
 	</div>
