@@ -3,6 +3,7 @@ html, body{
 	min-height: 100%;
 	font-size: 1.5vh;
 	width: 100%;
+	overflow-x: hidden;
 	
 
 }
@@ -201,22 +202,40 @@ div.card .card-body h4{
 
 
 div.cake {
-	background-image: url(/img/cake1.jpg);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435818/tatiana/cake1_g0rlqs.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 div.coffee {
-	background-image: url(/img/coffee1.jpg);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582437199/tatiana/coffee-171653_1920_isuzrr.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 div.donuts {
-	background-image: url(/img/dough.jpg);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435835/tatiana/dough_rx6lwi.jpg");
 	background-position: right;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+div.terms {
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582437183/tatiana/eat-792575_1920_rlwsru.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+div.faq {
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582437184/tatiana/measuring-cup-2510243_1920_yyli1h.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+div.about {
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435844/tatiana/pasta_olouxd.jpg");
+	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -236,6 +255,14 @@ p.subheading {
 	text-shadow: 1px 1px #000;
 }
 
+hr.underline{
+    background-color: red;
+    color: red;
+    width: 40%;
+    margin-left: 0;
+    height: 1px;
+    margin-top: 0;
+}
 
 
 /*========================FOOTER*/
@@ -280,7 +307,7 @@ div#nav10{display: none;}
 /*======================SIDEBAR============================*/
 #sidebar{
 	background-color: #e5e5e5;
-	background-image: url(/img/bg.png);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435818/tatiana/bg_cjbt4f.png");
 	background-repeat: no-repeat;
     background-position: top;
     background-size: inherit;
