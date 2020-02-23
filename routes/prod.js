@@ -2,6 +2,6 @@ var helmet = require("helmet"),
     compression = require("compression");
 
     module.exports = function(app){
-        app.use(helment());
+        app.use(helmet());
         app.use(compression());
     }
