@@ -17,11 +17,17 @@ var isLoggedIn = require("./middleware/isLoggedIn"),
  
 const MongoClient = require('mongodb').MongoClient;
 const uri = process.env.DATABASEURL;
-const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
+MongoClient.connect(uri, function(err, db) {
+  test.equal(null, err);
+  test.ok(db != null);
+
+  db.collection("replicaset_mongo_client_collection").update({a:1}, {b:1}, {upsert:true}, function(err, result) {
+    test.equal(null, err);
+    test.equal(1, result);
+
+    db.close();
+    test.done();
+  });
 });
 
 
