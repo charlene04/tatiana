@@ -31,7 +31,7 @@ router.post("/register", function(req, res){
 		}
 			passport.authenticate("local")(req, res, function(){
 			req.flash("success", "Successfully logged in!");
-			res.redirect("/menu/cakes");
+			res.redirect("/");
 		});
 	});
 });
