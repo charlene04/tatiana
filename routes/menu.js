@@ -14,18 +14,18 @@ router.get("/cakes", function(req, res){
 			req.flash("error", "Something went wrong. Please try again.")
 			res.redirect("/");
 		}else {
-			res.render("cake/cakes", {cakes: cakes});
+			res.render("../views/cake/cakes", {cakes: cakes});
 		}
 	});
 });
 
 router.get("/doughnuts", function(req, res){
-	Menu.find({id :2}, function(err, doughnuts){
+	Menu.find({id:2}, function(err, doughnuts){
 		if(err){
 			req.flash("error", "Something went wrong. Please try again.")
 			res.redirect("/");
 		}else {
-			res.render("doughnut/doughnuts", {doughnuts: doughnuts});
+			res.render("../views/doughnut/doughnuts", {doughnuts: doughnuts});
 		}
 	});
 });
@@ -36,7 +36,7 @@ router.get("/coffee", function(req, res){
 			req.flash("error", "Something went wrong. Please try again.")
 			res.redirect("/");
 		}else {
-			res.render("coffee/coffee", {coffees: coffees});
+			res.render("../views/coffee/coffee", {coffees: coffees});
 		}
 	});
 });

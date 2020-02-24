@@ -41,7 +41,7 @@ router.get("/coffee/:id/comments/new", isLoggedIn, function(req, res){
 			req.flash("error", "Something went wrong!");
 			res.redirect("/menu/coffee");
 		} else {
-			res.render("coffee/comment-coffee", {coffee: foundCoffee});
+			res.render("../views/coffee/comment-coffee", {coffee: foundCoffee});
 		}
 	});
 });
