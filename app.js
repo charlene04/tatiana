@@ -1,3 +1,9 @@
+var mongoUtil = require( './models/DB' );
+
+mongoUtil.connectToServer( function( err, client ) {
+  if (err) console.log(err);
+  // start the rest of your app here
+
  var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
@@ -14,13 +20,14 @@ var isLoggedIn = require("./middleware/isLoggedIn"),
 	 Comment = require("./models/Comment");
 // ===========APP CONFIG===============================
  //mongoose.connect("mongodb://localhost/tatianaDB", {useNewUrlParser: true});
+ /*
 const uri = process.env.DATABASEURL;
 mongoose.connect(uri,{useNewUrlParser: true}, function(err, db) {
  console.log(db);
 
 });
 
-
+*/
 
 app.use(session({
 	secret: "Charles built this",
@@ -117,4 +124,4 @@ app.listen(process.env.PORT || 3000, function(){
 
 
 
-
+} );

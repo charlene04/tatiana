@@ -1,3 +1,5 @@
+var mongoUtil = require( '../models/DB' );
+var db = mongoUtil.getDb();
 var router = require("express").Router({mergeParams:true});
 var mongoose = require("mongoose"),
     flash = require("connect-flash"),
@@ -9,7 +11,7 @@ var mongoose = require("mongoose"),
 	mongoose.set('useFindAndModify', false);
 
 router.get("/cakes", function(req, res){
-	Menu.find({id:1}, function(err, cakes){
+	db.collection('menus').find({id:1}, function(err, cakes){
 		if(err){
 			req.flash("error", "Something went wrong. Please try again.")
 			res.redirect("/");
@@ -20,7 +22,7 @@ router.get("/cakes", function(req, res){
 });
 
 router.get("/doughnuts", function(req, res){
-	Menu.find({id:2}, function(err, doughnuts){
+	db.collection('menus').find({id:2}, function(err, doughnuts){
 		if(err){
 			req.flash("error", "Something went wrong. Please try again.")
 			res.redirect("/");
@@ -31,7 +33,7 @@ router.get("/doughnuts", function(req, res){
 });
 
 router.get("/coffee", function(req, res){
-	Menu.find({id:3}, function(err, coffees){
+	db.collection('menus').find({id:3}, function(err, coffees){
 		if(err){
 			req.flash("error", "Something went wrong. Please try again.")
 			res.redirect("/");
