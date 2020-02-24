@@ -14,18 +14,10 @@ var isLoggedIn = require("./middleware/isLoggedIn"),
 	 Comment = require("./models/Comment");
 // ===========APP CONFIG===============================
  //mongoose.connect("mongodb://localhost/tatianaDB", {useNewUrlParser: true});
- 
-const MongoClient = require('mongodb').MongoClient;
 const uri = process.env.DATABASEURL;
-MongoClient.connect(uri, function(err, db) {
- 
+mongoose.connect(uri,{useNewUrlParser: true}, function(err, db) {
+ console.log(db);
 
-  db.collection("replicaset_mongo_client_collection").update({a:1}, {b:1}, {upsert:true}, function(err, result) {
-   
-
-    db.close();
-   
-  });
 });
 
 
