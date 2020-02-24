@@ -6,19 +6,23 @@ var passport = require("passport");
 var expressSanitizer = require("express-sanitizer");
 var mongoose = require("mongoose");
 var flash = require("connect-flash");
+var session = require("express-session");
+//var MongoStore = require("connect-mongo")(require("express-session"));
 var isLoggedIn = require("./middleware/isLoggedIn"),
 	 User = require("./models/User"),
 	 Menu = require("./models/Menu"),
-	 comment = require("./models/Comment");
+	 Comment = require("./models/Comment");
 // ===========APP CONFIG===============================
-//mongoose.connect("mongodb://localhost/tatianaDB", {useNewUrlParser: true});
-mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true})
+ //mongoose.connect("mongodb://localhost/tatianaDB", {useNewUrlParser: true});
+ mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true})
 
-app.use(require("express-session")({
+app.use(session({
 	secret: "Charles built this",
 	resave: false,
 	saveUninitialized: false
 }));
+
+ 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());
@@ -33,6 +37,7 @@ app.use(function(req, res, next){
 	res.locals.success = req.flash("success");
 	next();
 });
+app.use(session({ secret: 'passport-tutorial', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false }));
 
 require("./routes/prod")(app);
 

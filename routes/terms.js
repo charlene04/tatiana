@@ -1,7 +1,7 @@
 var router = require("express").Router();
 
 
-router.get("/terms-of-service", function(req, res){
+router.get("/terms", function(req, res){
     res.render("terms");
 });
 
