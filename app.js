@@ -111,8 +111,8 @@ app.use("/menu", createRoutes);
 app.use(logoutRoutes);
 
 // // ===============================================
-app.listen(process.env.PORT || "3000", function(){
-	console.log("The server has started on port 3000!");
+app.listen(process.env.PORT || 3000, function(){
+	console.log("The server has started on port "+ process.env.PORT);
 });
 
 
