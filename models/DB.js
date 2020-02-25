@@ -8,8 +8,13 @@ module.exports = {
     connectToServer: async function main(){
         let client;
         try{
-           client = await MongoClient.connect(url);
-           _db = await client.db('tatiana');  
+           client = await new MongoClient.connect(url,  { useNewUrlParser: true, useUnifiedTopology: true });
+           client.connect(err => {
+            _db = await client.db('tatiana');
+            // perform actions on the collection object
+            client.close();
+          });
+             
         }
         catch(err){ console.error(err); } // catch any mongo error here
         finally{ client.close(); } // make sure to close your connection after
@@ -26,3 +31,4 @@ module.exports = {
     return _db;
   }
 };
+
