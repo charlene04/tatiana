@@ -1,5 +1,6 @@
+var mongoose = require("mongoose");
 const MongoClient = require( 'mongodb' ).MongoClient;
-const url = process.env.DATABASEURL;
+const url = req.app.locals.DB_URL;
 
 var _db;
 

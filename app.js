@@ -18,6 +18,7 @@ var isLoggedIn = require("./middleware/isLoggedIn"),
 	 User = require("./models/User"),
 	 Menu = require("./models/Menu"),
 	 Comment = require("./models/Comment");
+	 
 // ===========APP CONFIG===============================
  //mongoose.connect("mongodb://localhost/tatianaDB", {useNewUrlParser: true});
  /*
@@ -28,6 +29,7 @@ mongoose.connect(uri,{useNewUrlParser: true}, function(err, db) {
 });
 
 */
+
 
 app.use(session({
 	secret: "Charles built this",
@@ -45,6 +47,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 app.use(function(req, res, next){
+	app.locals.DB_URL = process.env.DATABASEURL;
 	res.locals.currentUser = req.user;
 	res.locals.error = req.flash("error", "Something went wrong!");
 	res.locals.success = req.flash("success");
