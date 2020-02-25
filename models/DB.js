@@ -12,7 +12,7 @@ module.exports = {
            client.connect(err => {
             _db = await client.db('tatiana');
             // perform actions on the collection object
-            client.close();
+            //client.close();
           });
              
         }
