@@ -47,7 +47,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 app.use(function(req, res, next){
-	app.locals.DB_URL = process.env.DATABASEURL;
+	
 	res.locals.currentUser = req.user;
 	res.locals.error = req.flash("error", "Something went wrong!");
 	res.locals.success = req.flash("success");
@@ -119,6 +119,7 @@ app.use(faqRoutes),
 app.use("/menu", updateMenuRoutes);
 app.use("/menu", createRoutes);
 app.use(logoutRoutes);
+
 
 // // ===============================================
 app.listen(process.env.PORT || 3000, function(){
