@@ -30,8 +30,6 @@ module.exports = {
            client = await new MongoClient.connect(url,  { useNewUrlParser: true, useUnifiedTopology: true });
            client.connect(err => {
             _db = client.db('tatiana');
-            // perform actions on the collection object
-            //client.close();
           });
              
         }
