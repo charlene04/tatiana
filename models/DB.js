@@ -3,6 +3,25 @@ const MongoClient = require( 'mongodb' ).MongoClient;
 const url = process.env.DATABASEURL;
 console.log(url);
 var _db;
+/*
+var options = {
+  server: {
+      socketOptions: {
+          autoReconnect: true,
+          keepAlive: 1,
+          connectTimeoutMS: 30000,
+          socketTimeoutMS: 0
+      }
+  },
+  replSet: {
+      socketOptions: {
+          keepAlive: 1,
+          connectTimeoutMS: 30000,
+          socketTimeoutMS: 0
+      }
+  }
+}
+*/
 
 module.exports = {
     connectToServer: async function main(){
