@@ -8,7 +8,7 @@ module.exports = {
     connectToServer: async function main(){
         let client;
         try{
-           client = await MongoClient.connect(url, {useNewUrlParser: true});
+           client = await MongoClient.connect(url);
            _db = await client.db('tatiana');  
         }
         catch(err){ console.error(err); } // catch any mongo error here
