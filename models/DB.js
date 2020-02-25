@@ -8,7 +8,7 @@ module.exports = {
 
   connectToServer: function( callback ) {
     MongoClient.connect( url,  { useNewUrlParser: true, useUnifiedTopology: true }, function( err, client ) {
-      _db  = client.db('test_db');
+      _db  = client.tatiana('test_db');
       return callback( err );
     } );
   },
