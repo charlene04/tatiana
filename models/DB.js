@@ -31,7 +31,7 @@ module.exports = {
         }  
     
         catch(err){ console.error(err); } // catch any mongo error here
-        finally{ _db.close(); } // make sure to close your connection after
+        finally{ console.log("db connected!") } // make sure to close your connection after
        },
        /*
   connectToServer: async function( callback ) {
