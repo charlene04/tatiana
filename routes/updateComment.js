@@ -1,4 +1,4 @@
-var router = require("express").Router();
+var router = require("express").Router({mergeParams:true});
 var mongoose = require("mongoose"),
     flash = require("connect-flash"),
     Menu = require("../models/Menu"),
@@ -26,7 +26,7 @@ router.get("/cakes/:id/comments/:comment_id/edit", isLoggedIn, function(req, res
 			Comment.findById(req.params.comment_id, function(err, foundComment){
 				if(err){
 					req.flash("error", "Something went wrong!");
-					res.redirect("/cakes/" + foundCake._id)
+					res.redirect("/menu/cakes/" + foundCake._id)
 				
 				} else{
 					res.render("cake/edit-comment", {cake:foundCake, comment: foundComment});	
@@ -46,7 +46,7 @@ router.put("/cakes/:id/comments/:comment_id", isLoggedIn, function(req, res){
 				Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment, function(err, updatedComment){
 				if(err){
 					req.flash("error", "Something went wrong!");
-					res.redirect("/cakes/" + foundCake._id  +"/comments/" + updatedComment._id + "/edit");
+					res.redirect("/menu/cakes/" + foundCake._id  +"/comments/" + updatedComment._id + "/edit");
 			} else{
 				req.flash("success", "Comment updated!");
 				res.redirect("/cakes/" + foundCake._id);
@@ -66,7 +66,7 @@ router.get("/doughnuts/:id/comments/:comment_id/edit",isLoggedIn, function(req, 
 			Comment.findById(req.params.comment_id, function(err, foundComment){
 				if(err){
 					req.flash("error", "Something went wrong!");
-					res.redirect("/doughnuts/" + foundDough._id);
+					res.redirect("/menu/doughnuts/" + foundDough._id);
 					
 				} else{
 					res.render("doughnut/edit-comment", {dough:foundDough, comment: foundComment});	
@@ -81,15 +81,15 @@ router.put("/doughnuts/:id/comments/:comment_id", isLoggedIn, function(req, res)
 	Menu.findById(req.params.id, function(err, foundDough){
 			if(err){
 				req.flash("error", "Something went wrong!");
-				res.redirect("/doughnuts");
+				res.redirect("/menu/doughnuts");
 			} else{
 				Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment, function(err, updatedComment){
 				if(err){
 					req.flash("error", "Something went wrong!");
-					res.redirect("/doughnuts/" + foundDough._id +"/comments/" + updatedComment._id + "/edit");
+					res.redirect("/menu/doughnuts/" + foundDough._id +"/comments/" + updatedComment._id + "/edit");
 			} else{
 				req.flash("success", "Comment updated!");
-				res.redirect("/doughnuts/" + foundDough._id);
+				res.redirect("/menu/doughnuts/" + foundDough._id);
 			}
 
 			});		
@@ -101,11 +101,12 @@ router.get("/coffee/:id/comments/:comment_id/edit", isLoggedIn, function(req, re
 	Menu.findById(req.params.id, function(err, foundCoffee){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/coffee");
+			res.redirect("/menu/coffee");
 		} else{
 			Comment.findById(req.params.comment_id, function(err, foundComment){
 				if(err){
 					req.flash("error", "Something went wrong!");
+					res.redirect("/menu/coffee");
 				} else{
 					res.render("coffee/edit-comment", {coffee:foundCoffee, comment: foundComment});	
 				}
@@ -119,15 +120,15 @@ router.put("/coffee/:id/comments/:comment_id", isLoggedIn, function(req, res){
 	Menu.findById(req.params.id, function(err, foundCoffee){
 			if(err){
 				req.flash("error", "Something went wrong!");
-				res.redirect("/coffee");
+				res.redirect("/menu/coffee");
 			} else{
 				Comment.findByIdAndUpdate(req.params.comment_id, req.body.comment, function(err, updatedComment){
 				if(err){
 					req.flash("error", "Something went wrong!");
-					res.redirect("/coffee/" + foundCoffee._id +"/comments/" + updatedComment._id + "/edit");
+					res.redirect("/menu/coffee/" + foundCoffee._id +"/comments/" + updatedComment._id + "/edit");
 			} else{
 				req.flash("success", "Comment updated!");
-				res.redirect("/coffee/" + foundCoffee._id);
+				res.redirect("/menu/coffee/" + foundCoffee._id);
 			}
 
 			});		

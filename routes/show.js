@@ -1,4 +1,4 @@
-var router = require("express").Router();
+var router = require("express").Router({mergeParams:true});
 var mongoose = require("mongoose"),
     flash = require("connect-flash"),
     Menu = require("../models/Menu"),
@@ -15,7 +15,7 @@ router.get("/cakes/:id", function(req, res){
 	Menu.findById(req.params.id).populate("comments").exec(function(err, foundCake){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/cakes");
+			res.redirect("/menu/cakes");
 		} else {
 			res.render("cake/show-cake", {cake: foundCake});
 		}
@@ -26,7 +26,7 @@ router.get("/doughnuts/:id", function(req, res){
 	Menu.findById(req.params.id).populate("comments").exec(function(err, foundDough){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/doughnuts");
+			res.redirect("/menu/doughnuts");
 		} else {
 			res.render("doughnut/show-dough", {dough: foundDough});
 		}
@@ -37,7 +37,7 @@ router.get("/coffee/:id", function(req, res){
 	Menu.findById(req.params.id).populate("comments").exec(function(err, foundCoffee){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/coffee");
+			res.redirect("/menu/coffee");
 		} else {
 			res.render("coffee/show-coffee", {coffee: foundCoffee});
 		}

@@ -1,4 +1,4 @@
-var router = require("express").Router();
+var router = require("express").Router({mergeParams:true});
 var mongoose = require("mongoose"),
     flash = require("connect-flash"),
     Menu = require("../models/Menu"),
@@ -16,10 +16,10 @@ router.delete("/cakes/:id", isAdmin, function(req, res){
 	Menu.findByIdAndDelete(req.params.id, function(err){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/cakes");
+			res.redirect("/menu/cakes");
 		}else {
 			req.flash("success", "Menu deleted!");
-			res.redirect("/cakes");
+			res.redirect("/menu/cakes");
 		}
 	});	
 }); 
@@ -27,10 +27,10 @@ router.delete("/doughnuts/:id", isAdmin, function(req, res){
 	Menu.findByIdAndDelete(req.params.id, function(err){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/doughnuts");
+			res.redirect("/menu/doughnuts");
 		}else {
 			req.flash("success", "Menu deleted!");
-			res.redirect("/doughnuts");
+			res.redirect("/menu/doughnuts");
 		}
 	});	
 }); 
@@ -38,10 +38,10 @@ router.delete("/coffee/:id", isAdmin, function(req, res){
 	Menu.findByIdAndDelete(req.params.id, function(err){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/coffee");
+			res.redirect("/menu/coffee");
 		}else {
 			req.flash("success", "Menu deleted!");
-			res.redirect("/coffee");
+			res.redirect("/menu/coffee");
 		}
 	});	
 }); 

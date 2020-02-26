@@ -1,4 +1,4 @@
-var router = require("express").Router();
+var router = require("express").Router({mergeParams:true});
 var mongoose = require("mongoose"),
     flash = require("connect-flash"),
     Menu = require("../models/Menu"),
@@ -19,7 +19,7 @@ router.get("/cakes/:id/edit", isAdmin, function(req, res){
 	Menu.findById(req.params.id, function(err, foundCake){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/cakes");
+			res.redirect("/menu/cakes");
 		} else {
 			res.render("cake/edit-cake", {cake: foundCake});
 		}
@@ -29,7 +29,7 @@ router.get("/doughnuts/:id/edit", isAdmin, function(req, res){
 	Menu.findById(req.params.id, function(err, foundDough){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/doughnuts");
+			res.redirect("/menu/doughnuts");
 		} else {
 			res.render("doughnut/edit-dough", {dough: foundDough});
 		}
@@ -39,7 +39,7 @@ router.get("/coffee/:id/edit", isAdmin, function(req, res){
 	Menu.findById(req.params.id, function(err, foundCoffee){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/coffee");
+			res.redirect("/menu/coffee");
 		} else {
 			res.render("coffee/edit-coffee", {coffee: foundCoffee});
 		}
@@ -54,10 +54,10 @@ router.put("/cakes/:id", isAdmin, function(req, res){
 	Menu.findByIdAndUpdate(req.params.id, req.body.cake, function(err, updateCake){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/cakes");
+			res.redirect("/menu/cakes");
 		}else{
 			req.flash("success", "Menu updated!");
-			res.redirect("/cakes/" + req.params.id);
+			res.redirect("/menu/cakes/" + req.params.id);
 		}
 
 	});
@@ -68,10 +68,10 @@ router.put("/doughnuts/:id", isAdmin, function(req, res){
 	Menu.findByIdAndUpdate(req.params.id, req.body.doughnut, function(err, updateDough){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/doughnuts");
+			res.redirect("/menu/doughnuts");
 		}else{
 			req.flash("success", "Menu updated!");
-			res.redirect("/doughnuts/" + req.params.id);
+			res.redirect("/menu/doughnuts/" + req.params.id);
 		}
 
 	});
@@ -81,10 +81,10 @@ router.put("/coffee/:id", isAdmin, function(req, res){
 	Menu.findByIdAndUpdate(req.params.id, req.body.coffee, function(err, updateCoffee){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/coffee");
+			res.redirect("/menu/coffee");
 		}else{
 			req.flash("success", "Menu updated!");
-			res.redirect("/coffee/" + req.params.id);
+			res.redirect("/menu/coffee/" + req.params.id);
 		}
 
 	});

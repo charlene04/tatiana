@@ -1,4 +1,4 @@
-var router = require("express").Router();
+var router = require("express").Router({mergeParams:true});
 var mongoose = require("mongoose"),
     flash = require("connect-flash"),
     Menu = require("../models/Menu"),
@@ -32,10 +32,10 @@ router.post("/cakes", isAdmin, function(req, res){
 	Menu.create(req.body.cake, function(err, newCake){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/cakes/new");
+			res.redirect("/menu/cakes/new");
 		} else {
 			req.flash("success", "New menu uploaded successfully!");
-			res.redirect("/cakes");
+			res.redirect("/menu/cakes");
 		}
 	});
 });
@@ -45,7 +45,7 @@ router.post("/doughnuts", isAdmin, function(req, res){
 	Menu.create(req.body.doughnut, function(err, newDough){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/doughnuts/new");
+			res.redirect("/menu/doughnuts/new");
 		} else {
 			req.flash("success", "New menu uploaded successfully!");
 			res.redirect("/menu/doughnuts");
@@ -58,10 +58,10 @@ router.post("/coffee", isAdmin, function(req, res){
 	Menu.create(req.body.coffee, function(err, newCoffee){
 		if(err){
 			req.flash("error", "Something went wrong!");
-			res.redirect("/coffee/new");
+			res.redirect("/menu/coffee/new");
 		} else {
 			req.flash("success", "New menu uploaded successfully!");
-			res.redirect("/coffee");
+			res.redirect("/menu/coffee");
 		}
 	});
 });
