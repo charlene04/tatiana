@@ -25,13 +25,14 @@ module.exports = {
     connectToServer: async function main(){
         try{
            _db = await mongoose.connect(url,  { useNewUrlParser: true });
+           console.log(_db)
         }  
     
         catch(err){ console.error(err); } // catch any mongo error here
         finally{ console.log("db connected!") } // make sure to close your connection after
        },
 
-  getDb: function() {
+  getDb: async function() {
     return _db;
   }
 };

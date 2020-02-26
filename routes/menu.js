@@ -11,7 +11,7 @@ var mongoose = require("mongoose"),
 	mongoose.set('useFindAndModify', false);
 
 router.get("/cakes", function(req, res){
-	db.collection('menus').find({id:1}, function(err, cakes){
+	Menu.find({id:1}, function(err, cakes){
 		if(err){
 			req.flash("error", "Something went wrong. Please try again.")
 			res.redirect("/");
@@ -22,7 +22,7 @@ router.get("/cakes", function(req, res){
 });
 
 router.get("/doughnuts", function(req, res){
-	db.collection('menus').find({id:2}, function(err, doughnuts){
+	Menu.find({id:2}, function(err, doughnuts){
 		if(err){
 			req.flash("error", "Something went wrong. Please try again.")
 			res.redirect("/");
@@ -33,7 +33,7 @@ router.get("/doughnuts", function(req, res){
 });
 
 router.get("/coffee", function(req, res){
-	db.collection('menus').find({id:3}, function(err, coffees){
+	Menu.find({id:3}, function(err, coffees){
 		if(err){
 			req.flash("error", "Something went wrong. Please try again.")
 			res.redirect("/");
