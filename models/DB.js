@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 const url = process.env.DATABASEURL;
 var _db;
-/*
+
 var options = {
   server: {
       socketOptions: {
@@ -10,7 +10,7 @@ var options = {
           connectTimeoutMS: 30000,
           socketTimeoutMS: 0
       }
-  },
+  }, useNewUrlParser: true ,
   replSet: {
       socketOptions: {
           keepAlive: 1,
@@ -19,12 +19,12 @@ var options = {
       }
   }
 }
-*/
+
 
 module.exports = {
     connectToServer: async function main(){
         try{
-           _db = await mongoose.connect(url,  { useNewUrlParser: true });
+           _db = await mongoose.connect(url, options);
            console.log(_db)
         }  
     
