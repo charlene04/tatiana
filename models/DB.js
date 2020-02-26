@@ -27,14 +27,11 @@ module.exports = {
     connectToServer: async function main(){
         let client;
         try{
-           client = await new MongoClient.connect(url,  { useNewUrlParser: true, useUnifiedTopology: true });
-           client.connect(err => {
-            _db = client.db('tatiana');
-          });
+           _db = await mongoose.connect(url,  { useNewUrlParser: true, useUnifiedTopology: true });
              
         }
         catch(err){ console.error(err); } // catch any mongo error here
-        finally{ client.close(); } // make sure to close your connection after
+        finally{ _db.close(); } // make sure to close your connection after
        },
        /*
   connectToServer: async function( callback ) {
