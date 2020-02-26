@@ -1,7 +1,7 @@
 
 
 function isLoggedIn(req, res, next){
-	if(req.isAuthenticated() && req.user._id == req.params.id){
+	if(req.isAuthenticated()){
 		return next();
 	}
 	req.flash("error", "Please login first");
