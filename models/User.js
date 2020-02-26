@@ -20,4 +20,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 passport.use(new localStrategy(User.authenticate()));
 
+passport.authenticate('local', {failureFlash: 'Invalid username or password.'})
+passport.authenticate('local', {successFlash: 'Welcome!'})
+
 module.exports =  User = mongoose.model("User", UserSchema);

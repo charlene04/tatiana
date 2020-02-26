@@ -13,11 +13,13 @@ router.get("/login", function(req, res){
 });
 
 router.post("/login", passport.authenticate("local",
-	{
-		successRedirect: "/menu/cakes",
-		failureRedirect: "/login"
-	}), function(req, res){
-		
+{
+	failureRedirect: "/menu/cakes",
+	failureFlash: true,
+	successFlash: true
+}), function(req, res){
+	req.flash("success", "Successfully logged in as "+req.user.username+".");
+	res.redirect("/menu/cakes")
 });
 
 module.exports = router;
