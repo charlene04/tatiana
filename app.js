@@ -110,6 +110,7 @@ app.get("/contact", function(req, res){
 app.use("/menu", deleteCommentRoutes);
 app.use(termsRoutes);
 app.use("/menu", updateCommentRoutes);
+app.use("/menu", createRoutes);
 app.use(indexRoutes);
 app.use(registerRoutes);
 app.use("/menu", commentRoutes);
@@ -117,9 +118,9 @@ app.use("/menu", deleteRoutes);
 app.use("/menu", showRoutes);
 app.use("/menu", menuRoutes);
 app.use(loginRoutes);
-app.use(faqRoutes),
+app.use(faqRoutes);
 app.use("/menu", updateMenuRoutes);
-app.use("/menu", createRoutes);
+
 app.use(logoutRoutes);
 
 
