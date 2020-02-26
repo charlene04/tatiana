@@ -97,7 +97,7 @@ hr{
 /*======================ALL LOGINS======================================*/
 
 
-#signup, #login, #new {
+#signup, #login, .new {
 	
 	width: 50%;
 	margin: 0 auto;
@@ -114,7 +114,7 @@ div#admin{
 	padding:5px;
 }
 
-div#new{
+div.new{
 	width: 40%;
 	margin: 0 auto;
 	padding-top: 2em;
@@ -122,12 +122,12 @@ div#new{
 }
 
 @media only screen and (max-width:800px){
-    #signup, #login, #new{
+    #signup, #login, .new{
         width: 70%;
     }
 }
 @media only screen and (max-width:420px){
-	#signup, #login, #new{
+	#signup, #login, .new{
         width: 95%;
     }
 }
