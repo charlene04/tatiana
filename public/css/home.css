@@ -1,5 +1,6 @@
-
+@import url('https://fonts.googleapis.com/css?family=Bitter|Dancing+Script|Lobster|Teko&display=swap');
 html, body{
+	background-color: rgba(0, 0, 0, 0.4);
 	height: 100%;
 	font-weight: 2vw;
 	font-size: 2vh;
@@ -45,9 +46,12 @@ div.header{
 	min-height: 30%;
 }
 div.header h2{
-	font-size: 4.3em;
+	font-family: Lobster;
+	font-size: 5em;
 }
 div.header p{
+	letter-spacing: 1.1px;
+	font-family: Teko ;
 	font-size: 1.2em;
 	font-style: italic;
 }
@@ -78,18 +82,18 @@ div.header p{
 }
 
 .slider li:nth-child(1){
-	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435820/tatiana/fingerfoods_kgkmmz.jpg")
+	background-image: url(/img/coffee-171653_1920.jpg)
 }
 .slider li:nth-child(2){
-	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435838/tatiana/cupcakes1_n9u9ok.jpg");
+	background-image: url(/img/cupcakes.jpg);
 	animation-delay: 10s;
 }
 .slider li:nth-child(3){
-	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435867/tatiana/order_lyyj4p.jpg");
+	background-image: url(/img/dough.jpg);
 	animation-delay: 20s
 }
 .slider li:nth-child(4){
-	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435844/tatiana/pasta_olouxd.jpg");
+	background-image: url(/img/pasta.jpg);
 	animation-delay: 30s
 }
 

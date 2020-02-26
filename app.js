@@ -1,11 +1,13 @@
+var express = require("express");
+var app = express();
 var mongoUtil = require( './models/DB' );
 
-mongoUtil.connectToServer( function( err, client ) {
-  if (err) console.log(err);
+mongoUtil.connectToServer();
+	
+ 
   // start the rest of your app here
 
- var express = require("express");
-var app = express();
+ 
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var passport = require("passport");
@@ -122,10 +124,10 @@ app.use(logoutRoutes);
 
 
 // // ===============================================
-app.listen(process.env.PORT || 3000, function(){
+app.listen( process.env.PORT, function(){
 	console.log("The server has started on port "+ process.env.PORT);
 });
 
+  
+	
 
-
-} );

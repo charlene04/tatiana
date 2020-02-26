@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Dancing+Script|Lobster|Teko&display=swap');
 html, body{
+	font-family: Laila;
 	height: 100%;
 	min-height: 100%;
 	font-size: 1.8vh;
@@ -204,44 +206,45 @@ div.card .card-body h4{
 
 .jumbotron {
 	min-height: 40px;
+	padding: 2em;
 	
 }
 
 
 div.cake {
-	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435818/tatiana/cake1_g0rlqs.jpg");
+	background-image: url(/img/cake1.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 div.coffee {
-	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582437199/tatiana/coffee-171653_1920_isuzrr.jpg");
+	background-image: url(/img/coffee-171653_1920.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 div.donuts {
-	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435835/tatiana/dough_rx6lwi.jpg");
+	background-image: url(/img/dough.jpg);
 	background-position: right;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 div.terms {
-	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582437183/tatiana/eat-792575_1920_rlwsru.jpg");
+	background-image: url(/img/eat-792575_1920.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 div.faq {
-	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582437184/tatiana/measuring-cup-2510243_1920_yyli1h.jpg");
+	background-image: url(/img/measuring-cup-2510243_1920.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 div.about {
-	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435844/tatiana/pasta_olouxd.jpg");
+	background-image: url(/img/flour.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -255,7 +258,6 @@ h1.heading {
 }
 
 p.subheading {
-	font-family: "Laila";
 	letter-spacing: 2px;
 	color: rgb(250, 255, 150);
 	text-shadow: 1px 1px #000;
@@ -313,7 +315,7 @@ div#nav10{display: none;}
 /*======================SIDEBAR============================*/
 #sidebar{
 	background-color: #e5e5e5;
-	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435818/tatiana/bg_cjbt4f.png");
+	background-image: url(/img/bg.png);
 	background-repeat: no-repeat;
     background-position: top;
     background-size: inherit;
