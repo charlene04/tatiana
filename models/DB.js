@@ -3,7 +3,7 @@ const MongoClient = require( 'mongodb' ).MongoClient;
 const url = process.env.DATABASEURL;
 console.log(url);
 var _db;
-/*
+
 var options = {
   server: {
       socketOptions: {
@@ -21,7 +21,7 @@ var options = {
       }
   }
 }
-*/
+
 
 module.exports = {
     connectToServer: async function main(){
