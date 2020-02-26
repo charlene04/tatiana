@@ -28,7 +28,7 @@ module.exports = {
         let client;
         try{
            _db = await mongoose.connect(url,  { useNewUrlParser: true });
-            
+        }  
     
         catch(err){ console.error(err); } // catch any mongo error here
         finally{ _db.close(); } // make sure to close your connection after
