@@ -2,6 +2,7 @@ var mongoose = require("mongoose");
 const url = process.env.DATABASEURL;
 var _db;
 
+
 var options = {
   server: {
       socketOptions: {
@@ -28,7 +29,7 @@ module.exports = {
            console.log(_db)
         }  
     
-        catch(err){ console.error(err); } // catch any mongo error here
+        catch(err){ console.error(err); } 
         finally{ console.log("db connected!") } // make sure to close your connection after
        },
 

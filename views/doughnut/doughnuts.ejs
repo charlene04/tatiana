@@ -18,7 +18,7 @@
 					<%doughnuts.forEach(function(dough){%>
 						<div class="col-md-3 col-sm-6 mb-5">
 							<img class="img-thumbnail" src="<%=dough.image%>">
-							<p><strong><%=dough.name%></strong></p>
+							<p class="pt-1"><strong><%=dough.name%></strong></p>
 							<a class="btn btn-primary btn-xs" href="/menu/doughnuts/<%= dough._id %>">More Info</a>
 						</div>
 					<%});}%>
