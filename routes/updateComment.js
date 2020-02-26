@@ -29,7 +29,7 @@ router.get("/cakes/:id/comments/:comment_id/edit", isLoggedIn, function(req, res
 					res.redirect("/menu/cakes/" + foundCake._id)
 				
 				} else{
-					res.render("cake/edit-comment", {cake:foundCake, comment: foundComment});	
+					res.render("../views/cake/edit-comment", {cake:foundCake, comment: foundComment});	
 				}
 			})
 			
@@ -69,7 +69,7 @@ router.get("/doughnuts/:id/comments/:comment_id/edit",isLoggedIn, function(req, 
 					res.redirect("/menu/doughnuts/" + foundDough._id);
 					
 				} else{
-					res.render("doughnut/edit-comment", {dough:foundDough, comment: foundComment});	
+					res.render("../views/doughnut/edit-comment", {dough:foundDough, comment: foundComment});	
 				}
 			})
 			
@@ -108,7 +108,7 @@ router.get("/coffee/:id/comments/:comment_id/edit", isLoggedIn, function(req, re
 					req.flash("error", "Something went wrong!");
 					res.redirect("/menu/coffee");
 				} else{
-					res.render("coffee/edit-comment", {coffee:foundCoffee, comment: foundComment});	
+					res.render("../views/coffee/edit-comment", {coffee:foundCoffee, comment: foundComment});	
 				}
 			})
 			

@@ -19,7 +19,7 @@ router.get("/cakes/:id/comments/new", isLoggedIn,  function(req, res){
 			req.flash("error", "Something went wrong!");
 			res.redirect("/menu/cakes");
 		} else {
-			res.render("cake/comment-cake", {cake: foundCake});
+			res.render("../views/cake/comment-cake", {cake: foundCake});
 		}
 	});
 	
@@ -31,7 +31,7 @@ router.get("/doughnuts/:id/comments/new", isLoggedIn, function(req, res){
 			req.flash("error", "Something went wrong!");
 			res.redirect("/menu/doughnuts");
 		} else {
-			res.render("doughnut/comment-dough", {dough: foundDough});
+			res.render("../views/doughnut/comment-dough", {dough: foundDough});
 		}
 	});
 });

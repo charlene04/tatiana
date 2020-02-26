@@ -21,7 +21,7 @@ router.get("/cakes/:id/edit", isAdmin, function(req, res){
 			req.flash("error", "Something went wrong!");
 			res.redirect("/menu/cakes");
 		} else {
-			res.render("cake/edit-cake", {cake: foundCake});
+			res.render("../views/cake/edit-cake", {cake: foundCake});
 		}
 	});
 });
@@ -31,7 +31,7 @@ router.get("/doughnuts/:id/edit", isAdmin, function(req, res){
 			req.flash("error", "Something went wrong!");
 			res.redirect("/menu/doughnuts");
 		} else {
-			res.render("doughnut/edit-dough", {dough: foundDough});
+			res.render("../views/doughnut/edit-dough", {dough: foundDough});
 		}
 	});
 });
@@ -41,7 +41,7 @@ router.get("/coffee/:id/edit", isAdmin, function(req, res){
 			req.flash("error", "Something went wrong!");
 			res.redirect("/menu/coffee");
 		} else {
-			res.render("coffee/edit-coffee", {coffee: foundCoffee});
+			res.render("../views/coffee/edit-coffee", {coffee: foundCoffee});
 		}
 	});
 });

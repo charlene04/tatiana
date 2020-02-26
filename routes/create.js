@@ -14,13 +14,13 @@ var mongoose = require("mongoose"),
 
 
 router.get("/cakes/new", isAdmin, function(req, res){
-	res.render("cake/new-cake");
+	res.render("../views/cake/new-cake");
 });
 router.get("/doughnuts/new", isAdmin, function(req, res){
-	res.render("doughnut/new-dough");
+	res.render("../views/doughnut/new-dough");
 });
 router.get("/coffee/new", isAdmin, function(req, res){
-	res.render("coffee/new-coffee");
+	res.render("../views/coffee/new-coffee");
 });
 
 

@@ -1,13 +1,13 @@
 var router = require("express").Router();
 
 router.get("/", function(req, res){
-	res.render("home");
+	res.render("../views/home");
 	
 });
 
 router.get("/home", function(req, res){
 
-	res.render("/");
+	res.redirect("/");
 });
 
 module.exports  = router;

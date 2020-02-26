@@ -2,7 +2,7 @@ var router = require("express").Router();
 
 
 router.get("/faq", function(req, res){
-    res.render("faq");
+    res.render("../views/faq");
 });
 
 module.exports = router;
