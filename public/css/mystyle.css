@@ -360,6 +360,7 @@ div#nav10{display: none;}
 	background-color: #e5e5e5; 
 	width: 100px; 
 	z-index: 1; 
+	right: 2px;
 	height: 30px;
 	box-shadow: 0 8px 16px 0px rgba(0, 0, 0, 0.2);
 	
