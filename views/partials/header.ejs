@@ -33,9 +33,9 @@ video audio localstorage sessionstorage webworkers applicationcache svg inlinesv
 					<%if(currentUser){%>
 						<div class="dropdown float-right" style="overflow: hidden;">
 							<button class="nav-link dropbtn m-0 bg-transparent" onclick="logout()" style="border: none; outline: none; color: white;">
-								<div style="display: inline-flex; align-items: baseline;">
-									<i class="fas fa-justify"></i>
-							</div></button>
+								
+									<i class="fas fa-align-right"></i>
+							</button>
 							<div class="dropdown-content display">
 								
 								<a href="/logout" style="display: block; text-decoration: none; color: black; text-align: center;">Logout</a>
@@ -76,7 +76,7 @@ video audio localstorage sessionstorage webworkers applicationcache svg inlinesv
 								<div class="dropdown float-right" style="overflow: hidden;">
 									<button class="nav-link dropbtn m-0 bg-transparent" onclick="logout()" style="border: none; outline: none; color: white;">
 										<div style="display: inline-flex; align-items: baseline;">
-											<a class="nav-link" href="#" style="color: #fff;"><i class="fas fa-align-left"></i>Welcome, <%=currentUser.username%></a>
+											<a class="nav-link" href="#" style="color: #fff;">Welcome, <%=currentUser.username%></a>
 									<i class="fa fa-caret-down"></i></div></button>
 									<div class="dropdown-content display">
 										<a href="/logout" style="display: block; text-decoration: none; color: black; text-align: center;">Logout</a>
