@@ -210,39 +210,39 @@ div.card .card-body h4{
 
 
 div.cake {
-	background-image: url(/img/cake1.jpg);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435818/tatiana/cake1_g0rlqs.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 div.coffee {
-	background-image: url(/img/coffee-171653_1920.jpg);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582437199/tatiana/coffee-171653_1920_isuzrr.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 div.donuts {
-	background-image: url(/img/dough.jpg);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435835/tatiana/dough_rx6lwi.jpg");
 	background-position: right;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 div.terms {
-	background-image: url(/img/eat-792575_1920.jpg);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582437183/tatiana/eat-792575_1920_rlwsru.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 div.faq {
-	background-image: url(/img/measuring-cup-2510243_1920.jpg);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582437184/tatiana/measuring-cup-2510243_1920_yyli1h.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 div.about {
-	background-image: url(/img/flour.jpg);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435857/tatiana/flour_vscyp7.jpg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -313,14 +313,14 @@ div#nav10{display: none;}
 /*======================SIDEBAR============================*/
 #sidebar{
 	background-color: #e5e5e5;
-	background-image: url(/img/bg.png);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435818/tatiana/bg_cjbt4f.png");
 	background-repeat: no-repeat;
     background-position: top;
     background-size: inherit;
-	min-width: 250px;
-	max-width: 250px;
+	min-width: 270px;
+	max-width: 270px;
 	height: 100vh;
-	font-size: 16px;
+	font-size: 15px;
 	position: fixed;
 	left: 0;
 	z-index: 9999;

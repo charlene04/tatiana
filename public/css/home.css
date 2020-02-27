@@ -82,18 +82,18 @@ div.header p{
 }
 
 .slider li:nth-child(1){
-	background-image: url(/img/coffee-171653_1920.jpg)
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582437199/tatiana/coffee-171653_1920_isuzrr.jpg")
 }
 .slider li:nth-child(2){
-	background-image: url(/img/cupcakes.jpg);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435839/tatiana/cupcakes_y81ia6.jpg");
 	animation-delay: 10s;
 }
 .slider li:nth-child(3){
-	background-image: url(/img/dough.jpg);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435835/tatiana/dough_rx6lwi.jpg");
 	animation-delay: 20s
 }
 .slider li:nth-child(4){
-	background-image: url(/img/pasta.jpg);
+	background-image: url("https://res.cloudinary.com/charlene04/image/upload/v1582435844/tatiana/pasta_olouxd.jpg");
 	animation-delay: 30s
 }
 
